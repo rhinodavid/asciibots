@@ -1,20 +1,3 @@
-# Temp files #
-##############
 build/
-
-# Sublime Text files #
-######################
-.sublime-*
-
-# Logs #
-########
-
-*.log
-
-# node.js modules #
-###################
+dist/
 node_modules/
-
-# www build #
-#############
-.grunt/

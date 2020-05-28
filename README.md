@@ -1,4 +1,66 @@
-# asciibots.js 
+# asciibots
+
+```bash
+yarn add asciibots
+```
+
+> A node-friendly fork of https://github.com/walsh9/asciibots
+
+## Usage
+
+```javascript
+import bot from "asciibots";
+
+console.log(bot()); // Log a random bot
+```
+
+### Specifying a bot
+
+Call `bot()` with a specific 3-5 hex digit ID to get a particular combination as a text string. The final three digits indcate the robot's head, its body, and its legs or whatever. See below for reference. The id may be preceded with 2 additional digits which will change its 'eyes' and 'mouth'. 
+
+
+    ID Examples:
+                    _
+                   /     T___                 
+            .---3-|      |[o]|     
+            |      \_    \_-_/     
+            | __1__/  o==|ooo|==o  
+            ||     \_    |___|
+            || _6__/     /| |\
+            |||    \_   [_] [_]
+            |||
+       ID: "316"
+
+
+               __.--- Required (head: 0, body: 5, legs: 9)
+              |||    
+       ID: "13059"
+            ||
+            ''------- Optional (mouth: 1, eyes: 3)
+                 
+         ___T_
+        | d b |
+        |__=__|
+    }-. /\--o/\ .-{
+       " |___| "
+          |_|
+         (ooo)
+
+Calling:
+
+`bot('13059')`
+
+Always results in:
+
+         ___T_
+        | d b |
+        |__=__|
+    }-. /\--o/\ .-{
+       " |___| "
+          |_|
+         (ooo)
+
+## Background
 
 Based on [1k ASCII Mini Robot Factory](https://github.com/walsh9/1k-asciibots), but written in readable modern Javascript, without the constraints of fitting into 1k.
 
@@ -43,77 +105,3 @@ Inspired by the classic Tomy Pocket Game, [Robot Factory](http://www.masters.me.
        _\|+__|/_         /___\6          [o__]        '=c|___|
          /  |            [] []           ]| |[           /7 [|
         _\  |_          /:] [:\         [_| |_]        \/7  [|_
-
-# Usage
-
-Include the script in your page.
-
-`<script src="asciibots.js"></script>`
-
-Call the `.bot()` method on the `Asciibots` object with a specific 3-5 hex digit ID to get a particular combination as a text string. The final three digits indcate the robot's head, its body, and its legs or whatever. See above for reference. The id may be preceded with 2 additional digits which will change its 'eyes' and 'mouth'. 
-
-
-    ID Examples:
-                    _
-                   /     T___                 
-            .---3-|      |[o]|     
-            |      \_    \_-_/     
-            | __1__/  o==|ooo|==o  
-            ||     \_    |___|
-            || _6__/     /| |\
-            |||    \_   [_] [_]
-            |||
-       ID: "316"
-
-
-               __.--- Required (head: 0, body: 5, legs: 9)
-              |||    
-       ID: "13059"
-            ||
-            ''------- Optional (mouth: 1, eyes: 3)
-                 
-         ___T_
-        | d b |
-        |__=__|
-    }-. /\--o/\ .-{
-       " |___| "
-          |_|
-         (ooo)
-
-Calling:
-
-`Asciibots.bot('13059')`
-
-Always results in:
-
-         ___T_
-        | d b |
-        |__=__|
-    }-. /\--o/\ .-{
-       " |___| "
-          |_|
-         (ooo)
-
-Call the .bot() method with no parameters to get a random robot as a text string.
-
-`Asciibots.bot()`
-
-Has a 1/1048576 chance of producing
-
-         T___      
-         |[o]|     
-         \_-_/     
-    ()ooo|\=/|ooo()
-         |___|     
-         // \\     
-        _\\ //_    
-
-Or any other combination. If you don't specify a parameter it's random!
-
-#jQuery Plugin
-
-There's also a jQuery plugin.  This adds the `asciibot()` method to jQuery objects. When you call the `asciibot()` method it will set the text contents of each matched element to an ASCII robot.  Same as the vanilla Javascript version, if you pass a 3-5 digit hex string you will get a specific robot.  If you leave the parameters empty you will get a random robot.
-
-## License
-
-asciibots.js is licensed under the MIT License.
