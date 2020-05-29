@@ -1,4 +1,4 @@
-import robots from "./data/bots.js";
+const robots = require( "./data/bots.js");
 
 const idHelper = {
   isValid: function (id, minlength, maxlength, radix) {
