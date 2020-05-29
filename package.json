@@ -6,8 +6,7 @@
   "description": "ASCII Robots",
   "homepage": "https://github.com/rhinodavid/asciibots",
   "license": "MIT",
-  "main": "index.mjs",
-  "module": "index.mjs",
+  "main": "index.js",
   "name": "asciibots",
   "repository": {
     "type": "git",
@@ -16,6 +15,5 @@
   "scripts": {
     "postversion": "git push && git push --tags"
   },
-  "type": "module",
   "version": "1.0.3"
 }
