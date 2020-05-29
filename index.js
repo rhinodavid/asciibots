@@ -77,4 +77,4 @@ export default function bot(id) {
   return botString;
 }
 
-console.log(bot());
+module.exports = bot;
