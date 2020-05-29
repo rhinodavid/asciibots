@@ -48,7 +48,7 @@ function botSplit(botString) {
  * @param {number?} id An optional id of a bot
  * @returns {string} An ascii robot
  */
-export default function bot(id) {
+function bot(id) {
   const botIdDigits = idHelper.isValid(id, 3, 5, 16)
     ? id.split("")
     : idHelper.random(5, 16).split("");
